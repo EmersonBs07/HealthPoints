@@ -5,19 +5,19 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
-    private double peso;
-    private double altura;
-    private int idade;
+    private String peso;
+    private String altura;
+    private String dataNascimento;
 
     public Usuario(String nome, String email, String senha,
-                   double peso, double altura, int idade) {
+                   String peso, String altura, String dataNascimento) {
 
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.peso = peso;
         this.altura = altura;
-        this.idade = idade;
+        this.dataNascimento = dataNascimento;
     }
 
     public String getNome() {
@@ -32,15 +32,15 @@ public class Usuario {
         return senha;
     }
 
-    public double getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public double getAltura() {
+    public String getAltura() {
         return altura;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 }
