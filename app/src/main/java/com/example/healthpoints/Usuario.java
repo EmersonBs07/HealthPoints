@@ -1,23 +1,34 @@
 package com.example.healthpoints;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "usuarios")
 public class Usuario {
+
+    @PrimaryKey(autoGenerate = true)
+    private int id;
 
     private String nome;
     private String email;
     private String senha;
     private double peso;
     private double altura;
-    private int idade;
+    private String dataNascimento;
 
     public Usuario(String nome, String email, String senha,
-                   double peso, double altura, int idade) {
+                   double peso, double altura, String dataNascimento) {
 
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.peso = peso;
         this.altura = altura;
-        this.idade = idade;
+        this.dataNascimento = dataNascimento;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
@@ -40,7 +51,11 @@ public class Usuario {
         return altura;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
